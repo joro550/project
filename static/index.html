@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-800">
+        <!-- Top nav -->
+        <nav class="bg-gray-900 p-6 min-w-screen relative overflow-auto">
+
+            <!-- grouping -->
+            <section class="flex content-between justify-between">
+                <!-- First group of buttons -->
+                <section class="flex space-x-4">
+                    <a class="bg-orange-400 p-3 rounded-md">New</a>
+                    <a class="bg-gray-400 p-3 rounded-md">Import</a>
+                    <a class="bg-gray-400 p-3 rounded-md">Runner</a>
+                </section>
+            </section>
+        </nav>
+
+        <main>
+            <!-- Left hand nav -->
+            <nav class="bg-gray-400 p-3 max-w-xs min-h-screen">
+                <ul class="list-none m-0 space-y-4 p-0">
+                    <li>
+                        <span class="cursor-pointer select-none before:m-3 before:content-['\25B6'] ">Folder</span>
+
+                        <ul class="p-3 pl-6 space-y-4">
+                            <li>
+                                <span hx-get='/request/1' hx-target='#replace-me' class="cursor-pointer select-none before:m-3 before:content-['\25B6']">Request 1</span>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="cursor-pointer select-none before:m-3 before:content-['\25B6'] ">Folder 2</span>
+                        <ul class="hidden">
+                            <li>
+                                <span class="cursor-pointer select-none before:m-3">Request 1</span>
+
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Main replaceable screen-->
+            <section id="replace-me">
+
+            </section>
+        </main>
+    </body>
+</html>
+
